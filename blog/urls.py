@@ -1,6 +1,5 @@
-from django.urls import path, include
+from django.urls import path
 
-from .models import Commentary
 from .views import (
     MainPageView,
     PostDetailView
@@ -14,7 +13,7 @@ urlpatterns = [
         name="index"
     ),
     path(
-        "post/<int:pk>",
+        "posts/<int:pk>/",
         PostDetailView.as_view(),
         name="post-detail"
     ),

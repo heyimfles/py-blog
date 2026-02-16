@@ -1,10 +1,16 @@
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
   <div class="form">
     <form method="POST" action="">
       {% csrf_token %}
-      <label for="comment" class="comment-label">Leave a comment</label>
-      <br>
-      <textarea id="comment" name="comment" rows="4" cols="50" class="textarea-comment">Hello World!..</textarea>
-      <br>
-      <input type="submit" value="Submit" class="btn btn-primary">
+      {% crispy form %}
     </form>
   </div>
+{% else %}
+  Please
+  <a href="{% url 'login' %}">
+    log in
+  </a>
+  to comment.
+{% endif %}
