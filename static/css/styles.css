@@ -11,7 +11,7 @@
 }
 
 .content-base {
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .comment-ul {
@@ -31,4 +31,8 @@
 
 .post-detail-title, .index-title {
     color: #007bff;
+}
+
+.username {
+    padding-right: 20px;
 }

@@ -1,12 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="{% url "blog:index" %}">Homepage</a>
   {% if user.is_authenticated %}
-    <p class="username nav-item">{{ user.username }}</p>
+    <p class="username text-light ml-auto nav-item">{{ user.username }}</p>
     <form method="post" action="{% url "logout" %}">
       {% csrf_token %}
-      <button class ="login-logout-button" type="submit">Logout</button>
+      <button class ="to-the-right btn btn-primary" type="submit">Logout</button>
     </form>
-    <a class="btn btn-primary" href="{% url "logout" %}">Logout</a>
   {% else %}
     <a class="btn btn-primary" href="{% url "login" %}">Login</a>
   {% endif %}
