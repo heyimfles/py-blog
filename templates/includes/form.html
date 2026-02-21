@@ -2,10 +2,7 @@
 
 {% if user.is_authenticated %}
   <div class="form">
-    <form method="POST" action="">
-      {% csrf_token %}
-      {% crispy form %}
-    </form>
+    {% crispy form %}
   </div>
 {% else %}
   Please
